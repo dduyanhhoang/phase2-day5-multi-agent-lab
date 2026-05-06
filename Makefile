@@ -4,7 +4,7 @@ install:
 	pip install -e "[dev,llm]"
 
 test:
-	pytest
+	PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 pytest 
 
 lint:
 	ruff check src tests
